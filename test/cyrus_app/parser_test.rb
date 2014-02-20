@@ -4,15 +4,13 @@ class ParserTest < Minitest::Test
   attr_reader :parser
   def setup
     file =  "./test/fixtures/pipe.txt"
-    @parser = CyrusApp::Parser.new(file)
+    @parser = CyrusApp::Parser.new(file, "|")
   end
 
-  def test_parser_can_take_in_a_pipe_delimited_file
-    hash = { "LastName" => "Smith", "FirstName" => "Steve",
-	     "MiddleInitial" => "D", "Gender" => "M",
-	     "FavoriteColor" => "Red", "DateOfBirth" => "3-3-1985" }
-    assert_equal  hash, parser.formated_rows.first
-    assert_equal  3, parser.formated_rows.count
+  def test_parser_can_clean_a_row
+    row  = ["Smith "," Steve "," D "," M "," Red "," 3-3-1985"]
+    array = ["Smith", "Steve", "D", "M", "Red", "3-3-1985"]
+    assert_equal  array, parser.clean_row(row)
   end
 end
 

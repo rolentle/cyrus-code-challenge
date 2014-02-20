@@ -4,11 +4,7 @@ module CyrusApp
   class CommaParser < Parser
     attr_reader :formated_rows
     def initialize(file)
-      super(file)
-    end
-
-    def format_file(file)
-      CSV.read(file, col_sep: ",").map { |row| format_row(row) }
+      super(file, ",")
     end
 
     def format_row(row)
