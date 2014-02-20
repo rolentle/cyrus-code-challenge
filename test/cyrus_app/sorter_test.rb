@@ -30,7 +30,7 @@ class SorterTest < Minitest::Test
     assert_equal output, sorter.sort2
   end
 
-  def tet_sort_data_by_sort3
+  def test_sort_data_by_sort3
     output = [hash1, hash3, hash2]
     assert_equal output, sorter.sort3
   end
