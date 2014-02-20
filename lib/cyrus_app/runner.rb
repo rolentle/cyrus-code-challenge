@@ -18,6 +18,11 @@ module CyrusApp
       Printer.new.print(hashes)
     end
 
+    def output3
+      hashes = Sorter.new(@hashes).sort3
+      Printer.new.print(hashes)
+    end
+
     private
 
     def setup(files)
