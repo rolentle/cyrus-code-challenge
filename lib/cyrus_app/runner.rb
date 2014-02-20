@@ -4,7 +4,7 @@ require './lib/cyrus_app/sorter'
 module CyrusApp
   class Runner
     attr_reader :hashes
-    def initialize(files)
+    def initialize(files = ["./test/fixtures/pipe.txt", "./test/fixtures/comma.txt", "./test/fixtures/space.txt"])
       @hashes = setup(files)
     end
 
