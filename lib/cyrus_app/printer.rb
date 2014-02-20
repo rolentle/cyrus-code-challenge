@@ -5,9 +5,6 @@ module CyrusApp
       @input = input
     end
 
-    def output1
-    end
-
     def print(input)
       input.map { |hash| print_line(hash) }.join("\n")
     end

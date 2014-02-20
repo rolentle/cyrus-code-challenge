@@ -32,12 +32,4 @@ class PrinterTest < Minitest::Test
     output = "Smith Steve Male 3/3/1985 Red\nAbercrombie Neil Male 2/13/1943 Tan\nKournikova Anna Female 6/3/1975 Red"
     assert_equal output, printer.print(input)
   end
-
-  def test_it_can_print_to_output1
-
-    output = "Kournikova Anna Female 6/3/1975 Red\nAbercrombie Neil Male 2/13/1943 Tan\nSmith Steve Male 3/3/1985 Red"
-
-    assert_equal output, printer.output1
-  end
-
 end
