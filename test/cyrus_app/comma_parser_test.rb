@@ -10,7 +10,7 @@ class CommaParserTest < Minitest::Test
   def test_parser_can_take_in_a_pipe_delimited_file
     hash = { "LastName" => "Abercrombie", "FirstName" => "Neil",
 	     "Gender" => "Male", "FavoriteColor" => "Tan",
-	     "DateOfBirth" => "2-13-1943" }
+	     "DateOfBirth" => "2/13/1943" }
     assert_equal  hash, parser.formated_rows.first
     assert_equal  3, parser.formated_rows.count
   end
