@@ -20,6 +20,14 @@ class PrinterTest < Minitest::Test
     @printer = CyrusApp::Printer.new(input)
   end
 
+  def test_print_single_line
+    hash1 = {"LastName" => "Smith", "FirstName" => "Steve",
+	     "Gender" => "Male", "DateOfBirth" => "3/3/1985",
+	     "FavoriteColor" => "Red" }
+    line = "Smith Steve Male 3/3/1985 Red"
+    assert_equal line, printer.print_line(hash1)
+  end
+
   def test_print_unsorted
     output = "Smith Steve Male 3/3/1985 Red\nAbercrombie Neil Male 2/13/1943 Tan\nKournikova Anna Female 6/3/1975 Red"
     assert_equal output, printer.print(input)
