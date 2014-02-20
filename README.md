@@ -29,3 +29,9 @@ This repo uses the following dependencies
  simplecov (0.8.2)
 ```
 
+## Possible Iterations
+
+* Accept non-pipe.txt, comma.txt, or space.txt files via the Rake using envoirment variables i.e `bundle exec CYRUS_FILES="./file1.txt, ./file2.txt, file3.txt"`
+* Add error handling for invalid files and implement null object patterns redirect invalid files.
+* Store parsed inputs into its own file to store state for long term usage.
+* Add writing to file capabilities for all.
