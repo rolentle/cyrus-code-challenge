@@ -2,9 +2,9 @@ require 'csv'
 
 module CyrusApp
   class BaseParser
-    attr_reader :formated_rows
+    attr_reader :formatted_rows
     def initialize(file, col_sep)
-      @formated_rows = format_file(file,col_sep)
+      @formatted_rows = format_file(file,col_sep)
     end
 
     def format_file(file, col_sep)

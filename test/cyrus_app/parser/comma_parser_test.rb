@@ -11,8 +11,8 @@ class CommaParserTest < Minitest::Test
     hash = { "LastName" => "Abercrombie", "FirstName" => "Neil",
 	     "Gender" => "Male", "FavoriteColor" => "Tan",
 	     "DateOfBirth" => "2/13/1943" }
-    assert_equal  hash, parser.formated_rows.first
-    assert_equal  3, parser.formated_rows.count
+    assert_equal  hash, parser.formatted_rows.first
+    assert_equal  3, parser.formatted_rows.count
   end
 end
 

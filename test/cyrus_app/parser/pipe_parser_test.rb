@@ -12,8 +12,8 @@ class PipeParserTest < Minitest::Test
 	     "MiddleInitial" => "D",
 	     "Gender" => "M", "FavoriteColor" => "Red",
 	     "DateOfBirth" => "3-3-1985" }
-    assert_equal  hash, parser.formated_rows.first
-    assert_equal  3, parser.formated_rows.count
+    assert_equal  hash, parser.formatted_rows.first
+    assert_equal  3, parser.formatted_rows.count
   end
 end
 

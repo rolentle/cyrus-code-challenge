@@ -3,7 +3,6 @@ require './lib/cyrus_app/parser/base_parser'
 module CyrusApp
   class CommaParser < BaseParser
 
-    attr_reader :formated_rows
     def initialize(file)
       super(file, ",")
     end

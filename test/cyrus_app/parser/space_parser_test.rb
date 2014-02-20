@@ -11,8 +11,8 @@ class SpaceParserTest < Minitest::Test
     hash = { "LastName" => "Kournikova", "FirstName" => "Anna",
 	     "MiddleInitial" => "F","Gender" => "F",
 	     "FavoriteColor" => "Red", "DateOfBirth" => "6-3-1975" }
-    assert_equal  hash, parser.formated_rows.first
-    assert_equal  3, parser.formated_rows.count
+    assert_equal  hash, parser.formatted_rows.first
+    assert_equal  3, parser.formatted_rows.count
   end
 end
 
