@@ -14,13 +14,19 @@ module CyrusApp
     end
 
     def sort2
-      input.sort_by do |hash|
-	Date.strptime(hash["DateOfBirth"], '%m/%d/%Y')
+      input.sort do |a,b|
+	comp = (to_date(a["DateOfBirth"]) <=> to_date(b["DateOfBirth"]))
+	comp.zero? ? (a["LastName"] <=> b["LastName"]) : comp
       end
     end
 
     def sort3
       input.sort_by { |hash| hash["LastName"] }.reverse
+    end
+
+    private
+    def to_date(date)
+      Date.strptime(date, '%m/%d/%Y')
     end
   end
 end
