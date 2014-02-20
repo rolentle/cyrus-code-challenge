@@ -1,0 +1,29 @@
+## Setup
+
+* First run `bundle install` to install repos gem depenencies
+* Run `bundle exec rake -T` to see all rake tasks
+
+## Rake Tasks
+
+* `bundle exec rake` || `bundle exec rake test`: To run test suite
+* `bundle exec rake cyrus:output1`: pipe.txt, comma.txt, and space.txt sorted by gender (females before males) then by last name ascending.
+* `bundle exec rake cyrus:output2`: pipe.txt, comma.txt, and space.txt sorted by birth date, ascending.
+* `bundle exec rake cyrus:output3`: pipe.txt, comma.txt, and space.txt sorted by sorted by last name, descending.
+
+## Code Quality
+
+[![Code Climate](https://codeclimate.com/github/rolentle/cyrus-code-challenge.png)](https://codeclimate.com/github/rolentle/cyrus-code-challenge)
+
+`open ./coverage/index.html`: See test coverage by file
+
+## Gems and Dependencies
+
+This repo uses the following dependencies
+
+```ruby
+ ruby 2.0.0
+ minitest (5.2.3)
+ rake (10.1.1)
+ simplecov (0.8.2)
+```
+
