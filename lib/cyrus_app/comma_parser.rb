@@ -1,14 +1,15 @@
 require 'csv'
 
 module CyrusApp
-  class Parser
+  class CommaParser < Parser
     attr_reader :formated_rows
+
     def initialize(file)
-      @formated_rows = format_file(file)
+      super(file)
     end
 
     def format_file(file)
-      CSV.read(file, col_sep: "|").map { |row| format_row(row) }
+      CSV.read(file, col_sep: ",").map { |row| format_row(row) }
     end
 
     def format_row(row)
@@ -19,10 +20,6 @@ module CyrusApp
 	"Gender" => clean_row[3],
 	"FavoriteColor" => clean_row[4],
 	"DateOfBirth" => clean_row[5] }
-    end
-
-    def clean_row(row)
-      row.map(&:strip)
     end
   end
 end
