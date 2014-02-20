@@ -1,6 +1,6 @@
 ## Setup
 
-1. Unzip `cyrus_rolen_le.zip` and `cd cyrus_rolen_le`
+1. Run `unzip -a cyrus_rolen_le.zip` and `cd cyrus_rolen_le`
 2. Run `bundle install` to install repos gem depenencies
 3. Run `bundle exec rake -T` to see all rake tasks
 
