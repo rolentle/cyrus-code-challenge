@@ -1,12 +1,13 @@
-require 'csv'
+require './lib/cyrus_app/parser/base_parser'
 
 module CyrusApp
-  class  PipeParser < Parser
+  class  PipeParser < BaseParser
     attr_reader :formated_rows
 
-    def format_file(file)
-      super(file, "|")
+    def initialize(file)
+      super(file,"|")
     end
+
 
     def format_row(row)
       clean_row = clean_row(row)

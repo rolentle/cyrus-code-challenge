@@ -1,10 +1,10 @@
 require './test/test_helper'
 
-class ParserTest < Minitest::Test
+class BaseParserTest < Minitest::Test
   attr_reader :parser
   def setup
     file =  "./test/fixtures/pipe.txt"
-    @parser = CyrusApp::Parser.new(file, "|")
+    @parser = CyrusApp::BaseParser.new(file, "|")
   end
 
   def test_parser_can_clean_a_row
