@@ -7,7 +7,7 @@ class CommaParserTest < Minitest::Test
     @parser = CyrusApp::CommaParser.new(file)
   end
 
-  def test_parser_can_take_in_a_pipe_delimited_file
+  def test_parser_can_take_in_a_comma_delimited_file
     hash = { "LastName" => "Abercrombie", "FirstName" => "Neil",
 	     "Gender" => "Male", "FavoriteColor" => "Tan",
 	     "DateOfBirth" => "2/13/1943" }

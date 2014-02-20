@@ -7,7 +7,7 @@ class SpaceParserTest < Minitest::Test
     @parser = CyrusApp::SpaceParser.new(file)
   end
 
-  def test_parser_can_take_in_a_pipe_delimited_file
+  def test_parser_can_take_in_a_space_delimited_file
     hash = { "LastName" => "Kournikova", "FirstName" => "Anna",
 	     "MiddleInitial" => "F","Gender" => "F",
 	     "FavoriteColor" => "Red", "DateOfBirth" => "6-3-1975" }
