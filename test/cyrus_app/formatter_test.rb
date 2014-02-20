@@ -33,4 +33,28 @@ class FormatterTest < Minitest::Test
     output_hash = CyrusApp::Formatter.standardize(hash)
     assert_equal standard_hash, output_hash
   end
+
+  def test_it_standardize_hash_for_comma
+    hash = { "LastName" => "Abercrombie", "FirstName" => "Neil",
+	     "Gender" => "Male", "FavoriteColor" => "Tan",
+	     "DateOfBirth" => "2/13/1943" }
+    standard_hash = { "LastName" => "Abercrombie", "FirstName" => "Neil",
+		      "Gender" => "Male", "FavoriteColor" => "Tan",
+		      "DateOfBirth" => "2/13/1943" }
+
+    output_hash = CyrusApp::Formatter.standardize(hash)
+    assert_equal standard_hash, output_hash
+  end
+
+  def test_it_standardize_hash_for_space
+    hash = { "LastName" => "Kournikova", "FirstName" => "Anna",
+	     "MiddleInitial" => "F","Gender" => "F",
+	     "FavoriteColor" => "Red", "DateOfBirth" => "6-3-1975" }
+    standard_hash = { "LastName" => "Kournikova", "FirstName" => "Anna",
+		      "Gender" => "Female", "FavoriteColor" => "Red",
+		      "DateOfBirth" => "6/3/1975" }
+
+    output_hash = CyrusApp::Formatter.standardize(hash)
+    assert_equal standard_hash, output_hash
+  end
 end
