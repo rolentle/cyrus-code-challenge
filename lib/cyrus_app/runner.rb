@@ -9,18 +9,15 @@ module CyrusApp
     end
 
     def output1
-      hashes = Sorter.new(@hashes).sort1
-      Printer.new.print(hashes)
+      output(1)
     end
 
     def output2
-      hashes = Sorter.new(@hashes).sort2
-      Printer.new.print(hashes)
+      output(2)
     end
 
     def output3
-      hashes = Sorter.new(@hashes).sort3
-      Printer.new.print(hashes)
+      output(3)
     end
 
     private
@@ -37,6 +34,11 @@ module CyrusApp
 
     def format_hashes(hashes)
       hashes.map { |hash| Formatter.standardize(hash) }
+    end
+
+    def output(i)
+      hashes = Sorter.new(@hashes).send("sort#{i}".to_sym)
+      Printer.new.print(hashes)
     end
   end
 end
