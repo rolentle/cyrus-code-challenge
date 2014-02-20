@@ -6,13 +6,15 @@
 ## Rake Tasks
 
 * `bundle exec rake` || `bundle exec rake test`: To run test suite
-* `bundle exec rake cyrus:output1`: pipe.txt, comma.txt, and space.txt sorted by gender (females before males) then by last name ascending.
-* `bundle exec rake cyrus:output2`: pipe.txt, comma.txt, and space.txt sorted by birth date, ascending.
-* `bundle exec rake cyrus:output3`: pipe.txt, comma.txt, and space.txt sorted by sorted by last name, descending.
+* `bundle exec rake cyrus:output1`: To output pipe.txt, comma.txt, and space.txt sorted by gender (females before males) then by last name ascending.
+* `bundle exec rake cyrus:output2`: To output pipe.txt, comma.txt, and space.txt sorted by birth date, ascending.
+* `bundle exec rake cyrus:output3`: To output pipe.txt, comma.txt, and space.txt sorted by sorted by last name, descending.
 
 ## Code Quality
 
 [![Code Climate](https://codeclimate.com/github/rolentle/cyrus-code-challenge.png)](https://codeclimate.com/github/rolentle/cyrus-code-challenge)
+
+[github](https://github.com/rolentle/cyrus-code-challenge)
 
 `open ./coverage/index.html`: See test coverage by file
 
