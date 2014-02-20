@@ -7,9 +7,9 @@
 ## Rake Tasks
 
 * `bundle exec rake` || `bundle exec rake test`: To run test suite
-* `bundle exec rake cyrus:output1`: To output pipe.txt, comma.txt, and space.txt sorted by gender (females before males) then by last name ascending.
-* `bundle exec rake cyrus:output2`: To output pipe.txt, comma.txt, and space.txt sorted by birth date, ascending.
-* `bundle exec rake cyrus:output3`: To output pipe.txt, comma.txt, and space.txt sorted by sorted by last name, descending.
+* `bundle exec rake cyrus:output1`: To output pipe.txt, comma.txt, and space.txt sorted by gender (females before males) then by last name ascending
+* `bundle exec rake cyrus:output2`: To output pipe.txt, comma.txt, and space.txt sorted by birth date, ascending
+* `bundle exec rake cyrus:output3`: To output pipe.txt, comma.txt, and space.txt sorted by sorted by last name, descending
 
 ## Code Quality
 
@@ -30,9 +30,9 @@ This repo uses the following dependencies
  simplecov (0.8.2)
 ```
 
-## Possible Iterations
+## Possible Future  Iterations
 
-* Accept non-pipe.txt, comma.txt, or space.txt files via the Rake using envoirment variables i.e `bundle exec CYRUS_FILES="./file1.txt, ./file2.txt, file3.txt"`
-* Add error handling for invalid files and implement null object patterns redirect invalid files.
-* Store parsed inputs into its own file to store state for long term usage.
-* Add writing to file capabilities for all.
+* Accept non-pipe.txt, comma.txt, or space.txt files via the Rake using envoirment variables (i.e `bundle exec CYRUS_FILES="./file1.txt, ./file2.txt, file3.txt" rake cyrus:output1`)`
+* Add error handling for invalid files and implement null object patterns that redirect invalid files.
+* Store parsed inputs into its own file to save state for long term usage.
+* Add save to file capabilities for all of outputs.
