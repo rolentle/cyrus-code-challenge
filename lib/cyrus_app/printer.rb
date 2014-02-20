@@ -1,8 +1,6 @@
 module CyrusApp
   class Printer
-    attr_reader :input
-    def initialize(input)
-      @input = input
+    def initialize
     end
 
     def print(input)

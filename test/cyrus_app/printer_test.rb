@@ -17,7 +17,7 @@ class PrinterTest < Minitest::Test
 
     @input = [hash1, hash2, hash3]
 
-    @printer = CyrusApp::Printer.new(input)
+    @printer = CyrusApp::Printer.new
   end
 
   def test_print_single_line
