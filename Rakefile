@@ -12,12 +12,20 @@ end
 namespace :cyrus do
   desc "pipe.txt, comma.txt, and space.txt sorted by gender (females before males) then by last name ascending."
   task :output1 do
-  puts  CyrusApp::Runner.new.output1
+    puts "\n"
+    puts  CyrusApp::Runner.new.output1
   end
 
   desc "pipe.txt, comma.txt, and space.txt sorted by birth date, ascending."
   task :output2 do
-  puts  CyrusApp::Runner.new.output2
+    puts "\n"
+    puts  CyrusApp::Runner.new.output2
+  end
+
+  desc "pipe.txt, comma.txt, and space.txt sorted by sorted by last name, descending."
+  task :output3 do
+    puts "\n"
+    puts  CyrusApp::Runner.new.output3
   end
 end
 
